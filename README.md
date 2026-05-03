@@ -17,7 +17,7 @@ deeptune-hackathon/
     ├── agent_mock_escape_room.py    # Local API mock for the escape room puzzle
     └── agent_mock_loop_breaker.py   # Local API mock demonstrating circuit breakers
 
-# 🧠 Ultimate Gym Escape Room  
+## 🧠 Ultimate Gym Escape Room  
 **Autonomous AI Agent + Deterministic Docker Sandbox**
 
 An experimental system where an AI agent autonomously navigates a constrained Linux environment to solve multi-step challenges using real command-line tools.
