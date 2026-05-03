@@ -16,6 +16,7 @@ deeptune-hackathon/
     ├── agent_brain.py               # The main ReAct loop using Anthropic API
     ├── agent_mock_escape_room.py    # Local API mock for the escape room puzzle
     └── agent_mock_loop_breaker.py   # Local API mock demonstrating circuit breakers
+```
 
 ## 🧠 Ultimate Gym Escape Room  
 **Autonomous AI Agent + Deterministic Docker Sandbox**
