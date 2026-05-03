@@ -18,14 +18,14 @@ deeptune-hackathon/
     └── agent_mock_loop_breaker.py   # Local API mock demonstrating circuit breakers
 ```
 
-## 🧠 Ultimate Gym Escape Room  
+## Ultimate Gym Escape Room  
 **Autonomous AI Agent + Deterministic Docker Sandbox**
 
 An AI agent that navigates a constrained Linux environment to solve multi-step challenges using real shell tools—focused on **reliability, tool use, and failure recovery**.
 
 ---
 
-## 🚀 Overview
+## Overview
 
 **🏋️ Gym (Sandbox):**  
 Deterministic Docker environment with challenges involving:
