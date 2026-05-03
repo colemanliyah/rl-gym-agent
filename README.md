@@ -21,59 +21,49 @@ deeptune-hackathon/
 ## 🧠 Ultimate Gym Escape Room  
 **Autonomous AI Agent + Deterministic Docker Sandbox**
 
-An experimental system where an AI agent autonomously navigates a constrained Linux environment to solve multi-step challenges using real command-line tools.
-
-This project explores **agent reliability, tool use, and failure recovery** in a fully controlled, reproducible environment.
+An AI agent that navigates a constrained Linux environment to solve multi-step challenges using real shell tools—focused on **reliability, tool use, and failure recovery**.
 
 ---
 
 ## 🚀 Overview
 
-The system is composed of two parts:
-
-### 🏋️ The "Ultimate Gym" (Sandbox Environment)
-A deterministic Ubuntu-based Docker container containing structured challenges that require:
+**🏋️ Gym (Sandbox):**  
+Deterministic Docker environment with challenges involving:
 - File system navigation  
-- Shell command composition  
-- Environment inspection  
-- Database querying (SQLite)  
+- Shell commands  
+- Environment variables  
+- SQLite queries  
 
-### 🤖 The Agent System
-A Python-based autonomous agent powered by an LLM (Claude 3.5 Sonnet) that:
-- Interacts with Docker as its execution environment  
-- Generates and runs shell commands  
+**🤖 Agent System:**  
+LLM-powered agent (Claude 3.5 Sonnet) that:
+- Executes commands via Docker  
 - Iteratively reasons toward solutions  
-- Handles failure through built-in safeguards  
+- Recovers from failure with built-in safeguards  
 
 ---
 
-## 🧩 What the Agent Solves
+## 🧩 Challenges
 
-Inside the Gym, the agent must discover hidden values across three domains:
+| Challenge | Skill | Tools |
+|----------|------|------|
+| Encoded File | Decoding | `cat`, `base64` |
+| Env Variable | Inspection | `env`, `grep` |
+| Database | Querying | `sqlite3` |
 
-| Challenge | Skill Tested | Example Tooling |
-|----------|-------------|----------------|
-| Encoded File | File system + decoding | `cat`, `base64` |
-| Environment Variable | System inspection | `env`, `grep` |
-| Database Query | Structured data access | `sqlite3` |
-
-The agent is not given explicit instructions — it must **infer and execute the correct sequence of commands**.
+The agent must infer and execute the correct command sequence autonomously.
 
 ---
 
-## 🏗️ Architecture Highlights
+## 🏗️ Architecture
 
-### Deterministic Sandbox Design
-- Built on Docker for full isolation  
-- Uses SQLite instead of external DB services  
-- Ensures **fast startup + reproducibility**  
-- Designed for scaling into RL or batch agent evaluation  
+**Deterministic Sandbox**
+- Docker-based isolation  
+- SQLite for fast, reproducible runs  
 
----
-
-### Tool Execution Layer
-- LLM outputs are translated into executable shell commands  
-- Commands are wrapped in:
+**Tool Execution**
+- LLM outputs → shell commands  
+- Supports chaining via:
 
 ```bash
 sh -c 'command'
+```
