@@ -16,24 +16,3 @@ deeptune-hackathon/
     ├── agent_brain.py               # The main ReAct loop using Anthropic API
     ├── agent_mock_escape_room.py    # Local API mock for the escape room puzzle
     └── agent_mock_loop_breaker.py   # Local API mock demonstrating circuit breakers
-
-# 🏋️ Ultimate Gym Escape Room (Docker + AI Agent)
-
-## Part 1: The "Ultimate Gym" (Docker Environment)
-
-The Gym is a self-contained, deterministic Ubuntu sandbox. It contains three specific puzzles that an AI agent must solve using standard Linux utilities and SQLite.
-
----
-
-### 1. Build the Gym
-
-Navigate into the `gym-escape-room` directory and build the Docker image:
-
-```bash
-cd gym-escape-room
-docker build -t ultimate-gym .
-
-### 2. Deploy the Gym
-
-```bash
-docker run -d --name ultimate-escape-room ultimate-gym
