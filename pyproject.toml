@@ -1,0 +1,10 @@
+[project]
+name = "puzzle-gym"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.97.0",
+    "docker>=7.1.0",
+]
